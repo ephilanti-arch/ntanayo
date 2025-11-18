@@ -2,7 +2,13 @@ name: Build and Deploy Astro
 
 on:
   push:
+    # Run on main and feature branches matching ym-* (adjust pattern as needed)
+    branches: [main, 'ym-*']
+  # Also run builds for pull requests targeting main so CI runs before merging
+  pull_request:
     branches: [main]
+  # Allow manual runs from the Actions UI
+  workflow_dispatch: {}
 
 jobs:
   build:
@@ -16,13 +22,36 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Install dependencies
-        run: npm ci
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - name: Install dependencies (pnpm)
+        run: |
+          echo "pnpm version: $(pnpm --version || echo 'pnpm not installed yet')"
+          if [ -f pnpm-lock.yaml ]; then
+            echo "pnpm-lock.yaml found — attempting pnpm install --frozen-lockfile"
+            # Try a frozen install first (preferred for CI). If it fails (incompatible lockfile),
+            # fall back to a non-frozen install to allow the job to proceed and generate a compatible lockfile.
+            if pnpm install --frozen-lockfile; then
+              echo "pnpm install --frozen-lockfile succeeded"
+            else
+              echo "pnpm install --frozen-lockfile failed — falling back to pnpm install --no-frozen-lockfile"
+              pnpm install --no-frozen-lockfile
+            fi
+          else
+            echo "No pnpm lockfile — running pnpm install (will generate pnpm-lock.yaml)"
+            pnpm install
+          fi
+          echo "lockfile state:"
+          ls -l pnpm-lock.yaml || true
 
       - name: Build (Astro)
         run: npm run build
 
       - name: Deploy to gh-pages
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
