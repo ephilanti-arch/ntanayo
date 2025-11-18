@@ -29,7 +29,7 @@ const posts = Object.values(postsImport)
           <article class="post-card">
             <div class="post-meta">{new Date(p.frontmatter.date).toLocaleDateString()}</div>
             <h3>
-              <a href={p.url}>{p.frontmatter.title}</a>
+              <a href={`${site.baseurl}${p.url}`}>{p.frontmatter.title}</a>
             </h3>
             <p style="color:var(--muted);margin-top:.5rem">{p.frontmatter.description || ''}</p>
             <div class="post-tags">

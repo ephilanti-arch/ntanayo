@@ -55,6 +55,18 @@ jobs:
       - name: Build (Astro)
         run: npm run build
 
+      - name: Prevent Jekyll processing on gh-pages
+        run: |
+          # Ensure the publish directory contains a .nojekyll file so GitHub Pages
+          # will serve the files as static assets and won't run the Jekyll builder
+          # against the deployed branch.
+          if [ -d ./dist ]; then
+            touch ./dist/.nojekyll
+            echo ".nojekyll created in ./dist"
+          else
+            echo "Warning: ./dist not found"
+          fi
+
       - name: Deploy to gh-pages
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
