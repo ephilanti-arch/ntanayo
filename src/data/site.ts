@@ -15,8 +15,8 @@ export const site: Site = {
     email: 'you@example.com',
   },
   description: 'A blog hosted on GitHub Pages (Astro + TypeScript)',
-  url: 'https://<USERNAME>.github.io/ntanayo',
-  baseurl: '',
+  url: 'https://ephilanti-arch.github.io/ntanayo',
+  baseurl: '/ntanayo',
   googleAnalytics: 'G-XXXXXXXXXX',
   utterancesRepo: 'OWNER/REPO',
 };
