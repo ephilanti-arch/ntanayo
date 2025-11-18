@@ -1,5 +1,10 @@
 name: Build and Deploy Astro
 
+# Require write permissions for contents/pages so the deploy step can push the gh-pages branch.
+permissions:
+  contents: write
+  pages: write
+
 on:
   push:
     # Run on main and feature branches matching ym-* (adjust pattern as needed)
@@ -54,6 +59,10 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v4
         with:
+          # Use the default GITHUB_TOKEN. If you still encounter permission issues,
+          # create a Personal Access Token with `repo` and `workflow` scopes and
+          # store it as the secret `GH_PAGES_PAT` in the repository settings.
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.GH_PAGES_PAT }}
           publish_dir: ./dist
           publish_branch: gh-pages
