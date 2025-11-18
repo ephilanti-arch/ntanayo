@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>SEO, Google Analytics, and GTM — A Non-Technical Guide</title><meta name="description" content="SEO, Google Analytics, and GTM — A Non-Technical Guide — A blog hosted on GitHub Pages (Astro + TypeScript)"><link rel="stylesheet" href="/src/styles/main.css"><link rel="alternate" type="application/rss+xml" title="NTanayo" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><!-- Open Graph and Twitter Card --><meta property="og:type" content="website"><meta property="og:title" content="SEO, Google Analytics, and GTM — A Non-Technical Guide"><meta property="og:description" content="SEO, Google Analytics, and GTM — A Non-Technical Guide — A blog hosted on GitHub Pages (Astro + TypeScript)"><meta property="og:url" content="https://<USERNAME>.github.io/ntanayo/posts/seo-analytics-guide/"><meta name="twitter:card" content="summary_large_image"><!-- JSON-LD for basic organization/site --><script type="application/ld+json" src="/site-schema.json"></script></head> <body> <div class="site-container"> <header class="site-header"> <div class="site-title"><a href="/">NTanayo</a></div> <nav class="site-nav"> <a href="/">Home</a> <a href="/posts/">Posts</a> <a href="/about">About</a> </nav> </header> <main>  <article> <h1>SEO, Google Analytics, and GTM — A Non-Technical Guide</h1> <p><small>2025-11-20</small></p> <p>This post explains, in plain language, what SEO, Google Analytics (GA4), and Google Tag Manager (GTM) are, and how a non-technical blogger can use them to improve the site.</p>
+<p>SEO (Search Engine Optimization)</p>
+<ul>
+<li>What it is: SEO is the process of making your content easy for search engines to find and understand.</li>
+<li>Quick actions:
+<ul>
+<li>Use descriptive titles and clear URLs (we use /posts/:slug/).</li>
+<li>Add a short description or excerpt to each post and fill <code>site.description</code> in <code>src/data/site.ts</code>.</li>
+<li>Use headings (H1, H2) and include keywords naturally in the first paragraph.</li>
+<li>Add alt text to images.</li>
+</ul>
+</li>
+</ul>
+<p>Google Analytics (GA4)</p>
+<ul>
+<li>What it is: GA4 collects anonymous visitor metrics (how many visitors, which pages they view, which countries they come from).</li>
+<li>How to enable: replace the placeholder <code>G-XXXXXXXXXX</code> in <code>src/data/site.ts</code> with your Measurement ID.</li>
+<li>What to check: after enabling, open the Realtime report to confirm visits and then check Engagement to see which posts get traffic.</li>
+</ul>
+<p>Google Tag Manager (GTM)</p>
+<ul>
+<li>What it is: GTM is a container for scripts (tags) like Google Analytics, Facebook Pixel, etc. It allows you to add tracking without changing code every time.</li>
+<li>Non-technical workflow:
+<ol>
+<li>Create a GTM account and container at tagmanager.google.com.</li>
+<li>Install the GTM snippet once in <code>src/layouts/BaseLayout.astro</code> (I can add instructions or add it for you).</li>
+<li>From GTM’s web UI, add tags (e.g., Google Analytics) and publish the container — no code changes needed later.</li>
+</ol>
+</li>
+</ul>
+<p>Privacy and consent</p>
+<ul>
+<li>Consider a simple privacy statement in your footer explaining that you use GA for anonymous analytics and Utterances for comments.</li>
+<li>If you need GDPR/consent handling, use a consent manager or a basic banner that explains tracking and links to your privacy page.</li>
+</ul>
+<p>Where to start (recommended order)</p>
+<ol>
+<li>Create a Google Analytics (GA4) property and get the Measurement ID.</li>
+<li>Put the GA ID into <code>src/data/site.ts</code> (googleAnalytics field).</li>
+<li>Use <code>npm run dev</code> to preview locally and ensure the GA snippet appears in the page source.</li>
+<li>Optionally add GTM and move GA into GTM if you want more control over tags.</li>
+</ol>
+<p>Need help?</p>
+<ul>
+<li>I can add the GA snippet directly into <code>src/layouts/BaseLayout.astro</code> and/or add GTM snippet placeholders. Tell me which you prefer and I will update the layout file with clear instructions and placeholders.</li>
+</ul> </article>  <section id="comments"> <script async src="https://utteranc.es/client.js" repo="OWNER/REPO" issue-term="pathname" theme="github-light" crossorigin="anonymous"></script> <p style="font-size:0.9rem;color:#666;margin-top:0.5rem;">
+Install Utterances on the repository and set `site.utterancesRepo` in `src/data/site.ts`.
+</p> </section>  </main> <footer class="site-footer"> <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;"> <div>
+&copy; 2025 Your Name — <span style="color:#9fb1c9">A blog hosted on GitHub Pages (Astro + TypeScript)</span> </div> <div style="margin-top:.5rem">Built with Astro • <a href="/rss.xml">RSS</a></div> </div> </footer> </div> </body></html>

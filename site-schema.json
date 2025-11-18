@@ -1,0 +1,7 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Ntanayo",
+  "url": "https://<USERNAME>.github.io/ntanayo",
+  "description": "A blog hosted on GitHub Pages (Astro + TypeScript)"
+}

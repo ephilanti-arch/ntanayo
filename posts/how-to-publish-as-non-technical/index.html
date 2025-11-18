@@ -1,0 +1,56 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How a Non-Technical User Can Start Publishing Posts (Step-by-step)</title><meta name="description" content="How a Non-Technical User Can Start Publishing Posts (Step-by-step) — A blog hosted on GitHub Pages (Astro + TypeScript)"><link rel="stylesheet" href="/src/styles/main.css"><link rel="alternate" type="application/rss+xml" title="NTanayo" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><!-- Open Graph and Twitter Card --><meta property="og:type" content="website"><meta property="og:title" content="How a Non-Technical User Can Start Publishing Posts (Step-by-step)"><meta property="og:description" content="How a Non-Technical User Can Start Publishing Posts (Step-by-step) — A blog hosted on GitHub Pages (Astro + TypeScript)"><meta property="og:url" content="https://<USERNAME>.github.io/ntanayo/posts/how-to-publish-as-non-technical/"><meta name="twitter:card" content="summary_large_image"><!-- JSON-LD for basic organization/site --><script type="application/ld+json" src="/site-schema.json"></script></head> <body> <div class="site-container"> <header class="site-header"> <div class="site-title"><a href="/">NTanayo</a></div> <nav class="site-nav"> <a href="/">Home</a> <a href="/posts/">Posts</a> <a href="/about">About</a> </nav> </header> <main>  <article> <h1>How a Non-Technical User Can Start Publishing Posts (Step-by-step)</h1> <p><small>2025-11-18</small></p> <p>This guide shows, step-by-step, how a non-technical person can maintain and publish posts to this GitHub-hosted blog.</p>
+<p>Overview</p>
+<ul>
+<li>This site publishes automatically when the repository receives changes on <code>main</code> (a build runs and deploys to GitHub Pages).</li>
+<li>You will write blog posts as Markdown files and then push those files to the repository. No deep technical setup is required after the initial repository is configured.</li>
+</ul>
+<p>Step 1 — Edit a new post</p>
+<ul>
+<li>Create a new Markdown file in the <code>src/posts/</code> folder. Use this filename format: YYYY-MM-DD-your-title.md (for example 2025-11-18-my-first-post.md).</li>
+<li>At the top of the file add front matter (the metadata block) like this:</li>
+</ul>
+<hr>
+<p>title: “My First Post”
+date: 2025-11-18
+slug: my-first-post
+categories: [personal]
+tags: [intro]
+draft: false</p>
+<hr>
+<p>Step 2 — Write the content</p>
+<ul>
+<li>Below the front matter, write your post using Markdown (headings, lists, links, images). Keep it simple — the site will render the Markdown for you.</li>
+</ul>
+<p>Step 3 — Save and preview locally (optional but recommended)</p>
+<ul>
+<li>
+<p>If you want to preview before publishing, run these commands on your computer (one-time setup: install Node.js):</p>
+<p>npm ci
+npm run dev</p>
+</li>
+<li>
+<p>Open the address shown in the terminal (usually <a href="http://127.0.0.1:3000">http://127.0.0.1:3000</a>) and review your post.</p>
+</li>
+</ul>
+<p>Step 4 — Commit and push (publish)</p>
+<ul>
+<li>
+<p>Use your normal Git workflow (this could be Git on the command line or your Git GUI). Example commands:</p>
+<p>git add src/posts/2025-11-18-my-first-post.md
+git commit -m “Add: my first post”
+git push origin main</p>
+</li>
+<li>
+<p>Once the repository receives the push, the GitHub Actions workflow will build the site and publish the site to gh-pages. Wait a few minutes and then visit your site.</p>
+</li>
+</ul>
+<p>Step 5 — Troubleshooting (quick)</p>
+<ul>
+<li>Post not visible: make sure draft: false is present in the front matter.</li>
+<li>Build failed: open the Actions tab on GitHub, inspect the latest run logs, and copy any error message — it usually tells which file or package caused the issue.</li>
+<li>Comments not showing: follow the Utterances setup in the project README (install Utterances on the repo and set the utterancesRepo value).</li>
+</ul>
+<p>If you’d like, I can create a simple template file you can copy each time you want to write a post, or I can add a short checklist file (POST_TEMPLATE.md) into the repo.</p> </article>  <section id="comments"> <script async src="https://utteranc.es/client.js" repo="OWNER/REPO" issue-term="pathname" theme="github-light" crossorigin="anonymous"></script> <p style="font-size:0.9rem;color:#666;margin-top:0.5rem;">
+Install Utterances on the repository and set `site.utterancesRepo` in `src/data/site.ts`.
+</p> </section>  </main> <footer class="site-footer"> <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;"> <div>
+&copy; 2025 Your Name — <span style="color:#9fb1c9">A blog hosted on GitHub Pages (Astro + TypeScript)</span> </div> <div style="margin-top:.5rem">Built with Astro • <a href="/rss.xml">RSS</a></div> </div> </footer> </div> </body></html>

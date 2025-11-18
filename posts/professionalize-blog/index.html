@@ -1,0 +1,70 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>How to Make This Blog Look and Feel Professional</title><meta name="description" content="How to Make This Blog Look and Feel Professional — A blog hosted on GitHub Pages (Astro + TypeScript)"><link rel="stylesheet" href="/src/styles/main.css"><link rel="alternate" type="application/rss+xml" title="NTanayo" href="/rss.xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"><!-- Open Graph and Twitter Card --><meta property="og:type" content="website"><meta property="og:title" content="How to Make This Blog Look and Feel Professional"><meta property="og:description" content="How to Make This Blog Look and Feel Professional — A blog hosted on GitHub Pages (Astro + TypeScript)"><meta property="og:url" content="https://<USERNAME>.github.io/ntanayo/posts/professionalize-blog/"><meta name="twitter:card" content="summary_large_image"><!-- JSON-LD for basic organization/site --><script type="application/ld+json" src="/site-schema.json"></script></head> <body> <div class="site-container"> <header class="site-header"> <div class="site-title"><a href="/">NTanayo</a></div> <nav class="site-nav"> <a href="/">Home</a> <a href="/posts/">Posts</a> <a href="/about">About</a> </nav> </header> <main>  <article> <h1>How to Make This Blog Look and Feel Professional</h1> <p><small>2025-11-19</small></p> <p>This guide covers practical steps to make your blog look and read like a professional technical blog — even if you are not a developer.</p>
+<ol>
+<li>Choose a consistent visual style</li>
+</ol>
+<ul>
+<li>Pick a simple color palette (2–3 colors) and a readable font. Use the built-in layout (<code>src/layouts/BaseLayout.astro</code>) as a starting point; add a small <code>src/styles/</code> stylesheet for custom tweaks.</li>
+</ul>
+<ol start="2">
+<li>Use clear post structure</li>
+</ol>
+<ul>
+<li>Start each post with a descriptive title, a short summary (1–2 sentences), and use headings (H2/H3) for sections. Keep paragraphs short and add code blocks or images where helpful.</li>
+</ul>
+<ol start="3">
+<li>Add an author profile</li>
+</ol>
+<ul>
+<li>Add a small author bio in the layout or on the homepage. Create <code>src/data/authors.ts</code> with your name, short bio, and photo URL. This builds trust with readers.</li>
+</ul>
+<ol start="4">
+<li>Improve discoverability</li>
+</ol>
+<ul>
+<li>Add categories and tags in the post front matter. Show these on the post page and link to tag/category pages (this helps readers find related posts).</li>
+</ul>
+<ol start="5">
+<li>Add social and sharing metadata</li>
+</ol>
+<ul>
+<li>Include Open Graph and Twitter Card metadata so links show nice previews when shared. Update <code>src/layouts/BaseLayout.astro</code> to include meta tags using values from your site data.</li>
+</ul>
+<ol start="6">
+<li>Use a readable format for code</li>
+</ol>
+<ul>
+<li>For technical posts, include syntax-highlighted code blocks. Astro supports many high-quality syntax highlighters with minimal setup.</li>
+</ul>
+<ol start="7">
+<li>Polish: images, thumbnails, and typography</li>
+</ol>
+<ul>
+<li>Use consistent image sizes for thumbnails. Optimize images (smaller files) and provide alt text. Consider a subtle max-line-width and larger body text for readability.</li>
+</ul>
+<ol start="8">
+<li>Editorial process</li>
+</ol>
+<ul>
+<li>Use a simple checklist: Draft -> Review -> Publish. If possible, have someone proofread technical accuracy and grammar before publishing.</li>
+</ul>
+<ol start="9">
+<li>Professional touches</li>
+</ol>
+<ul>
+<li>Add an About page, Contact link, and a clear archive or tags page. Consider a simple logo (can be text-based) and site favicon.</li>
+</ul>
+<ol start="10">
+<li>Accessibility and performance</li>
+</ol>
+<ul>
+<li>Make sure text contrasts are sufficient, links are descriptive, and pages load quickly. Fast sites credit readers and search engines alike.</li>
+</ul>
+<p>If you’d like, I can:</p>
+<ul>
+<li>add an <code>src/data/authors.ts</code> file and a small author card component,</li>
+<li>add a <code>src/styles/main.css</code> with a tasteful baseline style,</li>
+<li>or add Open Graph metadata to <code>BaseLayout.astro</code> now.</li>
+</ul> </article>  <section id="comments"> <script async src="https://utteranc.es/client.js" repo="OWNER/REPO" issue-term="pathname" theme="github-light" crossorigin="anonymous"></script> <p style="font-size:0.9rem;color:#666;margin-top:0.5rem;">
+Install Utterances on the repository and set `site.utterancesRepo` in `src/data/site.ts`.
+</p> </section>  </main> <footer class="site-footer"> <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;"> <div>
+&copy; 2025 Your Name — <span style="color:#9fb1c9">A blog hosted on GitHub Pages (Astro + TypeScript)</span> </div> <div style="margin-top:.5rem">Built with Astro • <a href="/rss.xml">RSS</a></div> </div> </footer> </div> </body></html>
