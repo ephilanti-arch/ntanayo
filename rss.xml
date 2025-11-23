@@ -2,47 +2,47 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NTanayo</title>
-    <link>https://ephilanti-arch.github.io/ntanayo/</link>
+    <link>https://ntanayo.github.io/</link>
     <description>A blog hosted on GitHub Pages (Astro + TypeScript)</description>
     <language>en</language>
-    <atom:link href="https://ephilanti-arch.github.io/ntanayo/rss.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://ntanayo.github.io/rss.xml" rel="self" type="application/rss+xml"/>
     
     <item>
       <title>Sapiens — An Extensive Summary: How We Became What We Are</title>
-      <link>https://ephilanti-arch.github.io/ntanayo/posts/sapiens-extensive-summary/</link>
-      <guid>https://ephilanti-arch.github.io/ntanayo/posts/sapiens-extensive-summary/</guid>
+      <link>https://ntanayo.github.io/posts/sapiens-extensive-summary/</link>
+      <guid>https://ntanayo.github.io/posts/sapiens-extensive-summary/</guid>
       <pubDate>Sat, 22 Nov 2025 00:00:00 GMT</pubDate>
       
     </item>
 
     <item>
       <title>Sapiens: A Short, Strange Tour of Our Species</title>
-      <link>https://ephilanti-arch.github.io/ntanayo/posts/sapiens-brief-history-of-humankind/</link>
-      <guid>https://ephilanti-arch.github.io/ntanayo/posts/sapiens-brief-history-of-humankind/</guid>
+      <link>https://ntanayo.github.io/posts/sapiens-brief-history-of-humankind/</link>
+      <guid>https://ntanayo.github.io/posts/sapiens-brief-history-of-humankind/</guid>
       <pubDate>Fri, 21 Nov 2025 00:00:00 GMT</pubDate>
       
     </item>
 
     <item>
       <title>SEO, Google Analytics, and GTM — A Non-Technical Guide</title>
-      <link>https://ephilanti-arch.github.io/ntanayo/posts/seo-analytics-guide/</link>
-      <guid>https://ephilanti-arch.github.io/ntanayo/posts/seo-analytics-guide/</guid>
+      <link>https://ntanayo.github.io/posts/seo-analytics-guide/</link>
+      <guid>https://ntanayo.github.io/posts/seo-analytics-guide/</guid>
       <pubDate>Thu, 20 Nov 2025 00:00:00 GMT</pubDate>
       
     </item>
 
     <item>
       <title>How to Make This Blog Look and Feel Professional</title>
-      <link>https://ephilanti-arch.github.io/ntanayo/posts/professionalize-blog/</link>
-      <guid>https://ephilanti-arch.github.io/ntanayo/posts/professionalize-blog/</guid>
+      <link>https://ntanayo.github.io/posts/professionalize-blog/</link>
+      <guid>https://ntanayo.github.io/posts/professionalize-blog/</guid>
       <pubDate>Wed, 19 Nov 2025 00:00:00 GMT</pubDate>
       
     </item>
 
     <item>
       <title>How a Non-Technical User Can Start Publishing Posts (Step-by-step)</title>
-      <link>https://ephilanti-arch.github.io/ntanayo/posts/how-to-publish-as-non-technical/</link>
-      <guid>https://ephilanti-arch.github.io/ntanayo/posts/how-to-publish-as-non-technical/</guid>
+      <link>https://ntanayo.github.io/posts/how-to-publish-as-non-technical/</link>
+      <guid>https://ntanayo.github.io/posts/how-to-publish-as-non-technical/</guid>
       <pubDate>Tue, 18 Nov 2025 00:00:00 GMT</pubDate>
       
     </item>

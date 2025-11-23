@@ -2,6 +2,6 @@
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "NTanayo",
-  "url": "https://ephilanti-arch.github.io/ntanayo",
+  "url": "https://ntanayo.github.io",
   "description": "A blog hosted on GitHub Pages (Astro + TypeScript)"
 }
