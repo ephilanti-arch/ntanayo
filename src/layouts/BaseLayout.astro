@@ -56,7 +56,9 @@ const jsonLd = JSON.stringify({
             &copy; {new Date().getFullYear()}
             {site.author.name} — <span style="color:#9fb1c9">{site.description}</span>
           </div>
-          <div style="margin-top:.5rem">Built with Astro • <a href="/rss.xml">RSS</a></div>
+          <div style="margin-top:.5rem">
+            Built with Astro • <a href={`${site.baseurl}/rss.xml`}>RSS</a>
+          </div>
         </div>
       </footer>
     </div>
