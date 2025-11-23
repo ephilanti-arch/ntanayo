@@ -27,7 +27,9 @@ const posts: PostMeta[] = Object.values(modules)
       <h1>{site.title}</h1>
       <p>{site.description}</p>
       <p style="margin-top:1rem">
-        <a href="/posts/" style="color:var(--accent);text-decoration:none">Browse posts →</a>
+        <a href={`/ntanayo/posts`} style="color:var(--accent);text-decoration:none"
+          >Browse posts →</a
+        >
       </p>
     </div>
     <aside style="padding:1rem">
@@ -37,7 +39,7 @@ const posts: PostMeta[] = Object.values(modules)
           A short personal blog exploring ideas, books, and technical notes.
         </p>
         <p style="margin-top:.5rem">
-          <a href="/about" style="color:var(--accent)">Learn more</a>
+          <a href={`/ntanayo/about/`} style="color:var(--accent)">Learn more</a>
         </p>
       </div>
     </aside>
